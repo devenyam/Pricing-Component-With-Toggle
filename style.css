@@ -239,6 +239,10 @@ body {
     height: 450px;
     border-radius: 10px;
   }
+  
+  .long-card {
+    height: 475px;
+  }
 
   .attribution {
     font-size: 12px;
