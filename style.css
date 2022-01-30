@@ -13,7 +13,7 @@ body {
   background: hsl(240, 78%, 98%);
   font-family: 'Montserrat', sans-serif;
   font-size: 15;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .top-background {
@@ -36,6 +36,7 @@ body {
 
 .main-header h2 {
   color: hsl(233, 13%, 49%);
+  font-size: 2em;
 }
 
 .navs {
@@ -55,8 +56,8 @@ body {
     hsl(236, 72%, 79%),
     hsl(237, 63%, 64%)
   );
-  height: 20px;
-  width: 40px;
+  height: 30px;
+  width: 60px;
   border-radius: 50px;
   position: relative;
   cursor: pointer;
@@ -67,9 +68,9 @@ body {
   height: 80%;
   width: 40%;
   border-radius: 50%;
-  margin: 2px 2.5px;
+  margin: 3px 2px;
   position: absolute;
-  right: 0;
+  right: 3%;
   cursor: pointer;
   transition: 0.5s ease-out;
 }
@@ -90,10 +91,11 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 1.5em;
-  height: 450px;
-  width: 330px;
+  height: 480px;
+  width: 350px;
   padding: 30px 20px;
   z-index: 5;
+  box-shadow: 1px 1px 20px hsla(236, 72%, 79%, 0.644);
 }
 
 .normal-card h4 {
@@ -119,8 +121,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 1.75em;
-  height: 500px;
-  width: 330px;
+  height: 520px;
+  width: 350px;
   padding: 40px 30px;
   color: white;
   border-radius: 10px;
@@ -140,7 +142,7 @@ body {
 }
 
 .money {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 
@@ -151,6 +153,7 @@ body {
   align-items: center;
   width: 100%;
   border-top: 0.5px solid hsl(234, 14%, 74%);
+  font-weight: 600;
 }
 
 .plan > * {
@@ -168,7 +171,7 @@ body {
 .normal-card a {
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin-top: 10px;
   color: white;
   font-weight: 700;
@@ -188,8 +191,8 @@ body {
 .long-card a {
   background: white;
   width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 15px;
+  margin-top: 5px;
 
   color: hsl(237, 63%, 64%);
   font-weight: 700;
@@ -213,7 +216,7 @@ body {
 /* Active class */
 
 .toggle {
-  right: 47%;
+  right: 50%;
 }
 
 @media screen and (max-width: 599px) {
@@ -221,7 +224,7 @@ body {
   body {
     overflow-x: hidden;
   }
-  
+
   .top-background {
     right: -5%;
     z-index: 1;
@@ -241,15 +244,16 @@ body {
   }
 
   .container > * {
-    height: 450px;
+    height: 480px;
     border-radius: 10px;
   }
-  
+
   .long-card {
-    height: 475px;
+    height: 500px;
   }
 
   .attribution {
     font-size: 12px;
   }
 }
+
