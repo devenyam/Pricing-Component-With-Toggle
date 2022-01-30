@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <title>Pricing Component With Toggle</title>
+    <link
+      rel="shortcut icon"
+      href="favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Pricing Component</title>
   </head>
   <body>
+    <div class="top-background">
+      <img src="bg-top.svg" alt="top background" />
+    </div>
+    <div class="bottom-background">
+      <img src="bg-bottom.svg" alt="bottom background" />
+    </div>
     <header>
       <div class="main-header">
         <h2>Our Pricing</h2>
@@ -28,7 +38,7 @@
 
     <main>
       <div class="container">
-        <div class="normal-card">
+        <div class="normal-card first">
           <h4>Basic</h4>
           <div class="price">
             <h1 class="currency">$</h1>
@@ -39,9 +49,7 @@
             <div class="users">2 Users Allowed</div>
             <div class="usage">Send up to 3 GB</div>
           </div>
-          <div class="normal-card-link">
-            <button>Learn more</button>
-          </div>
+          <a href="#">Learn more</a>
         </div>
 
         <div class="long-card">
@@ -55,12 +63,10 @@
             <div class="users">5 Users Allowed</div>
             <div class="usage">Send up to 10 GB</div>
           </div>
-          <div class="long-card-link">
-            <button>Learn more</button>
-          </div>
+          <a href="#">Learn more</a>
         </div>
 
-        <div class="normal-card">
+        <div class="normal-card second">
           <h4>Master</h4>
           <div class="price">
             <h1 class="currency">$</h1>
@@ -71,9 +77,7 @@
             <div class="users">10 Users Allowed</div>
             <div class="usage">Send up to 20 GB</div>
           </div>
-          <div class="normal-card-link">
-            <button>Learn more</button>
-          </div>
+          <a href="#">Learn more</a>
         </div>
       </div>
     </main>
@@ -83,7 +87,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/devenyam/Pricing-Component-With-Toggle">Devenyam</a>.
+        >. Coded by <a href="#">Devenyam</a>.
       </div>
     </footer>
   </body>
