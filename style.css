@@ -6,47 +6,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* overflow: hidden; */
 }
 
 html,
 body {
   background: hsl(240, 78%, 98%);
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1em;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  margin-top: 30px;
+  font-size: 15;
+  padding: 40px 0;
 }
 
-header {
-  margin: 5px 0;
-  padding: 5px 0;
+.top-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
-nav {
-  padding: 10px 0;
-}
-
-h1 {
-  font-weight: 700;
+.bottom-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .main-header {
+  text-align: center;
+}
+
+.main-header h2 {
   color: hsl(233, 13%, 49%);
 }
 
 .navs {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
   color: hsl(234, 14%, 74%);
   font-weight: 600;
+  margin: 30px 0;
 }
 
 .slide-track {
@@ -59,6 +59,7 @@ h1 {
   width: 40px;
   border-radius: 50px;
   position: relative;
+  cursor: pointer;
 }
 
 .toggler {
@@ -70,48 +71,41 @@ h1 {
   position: absolute;
   right: 0;
   cursor: pointer;
-  transition: 0.8s ease-in-out;
+  transition: 0.5s ease-out;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: flex-start;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 1em;
-  margin: 1em 0;
-  width: 90vw;
-}
-
-.container > * {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1em;
-  padding: 20px 15px;
-  width: 90%;
-  border-radius: 5px;
-}
-
-.price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.currency {
-  font-size: 1.5rem;
-  margin: 0 4px;
-}
-
-.money {
-  font-size: 3rem;
+  padding: 30px 0;
+  z-index: 5;
 }
 
 .normal-card {
   background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5em;
+  height: 450px;
+  width: 330px;
+  padding: 30px 20px;
+  z-index: 5;
+}
+
+.normal-card h4 {
+  color: hsl(233, 13%, 49%);
+}
+
+.first {
+  border-radius: 10px 0 0 10px;
+}
+
+.second {
+  border-radius: 0 10px 10px 0;
 }
 
 .long-card {
@@ -120,65 +114,100 @@ h1 {
     hsl(236, 72%, 79%),
     hsl(237, 63%, 64%)
   );
-  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.75em;
+  height: 500px;
+  width: 330px;
+  padding: 40px 30px;
+  color: white;
+  border-radius: 10px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.money {
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 
 .plan {
-  border-top: 0.5px solid hsl(234, 14%, 74%);
-  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  border-top: 0.5px solid hsl(234, 14%, 74%);
 }
 
 .plan > * {
-  padding: 10px;
   border-bottom: 0.5px solid hsl(234, 14%, 74%);
-}
-
-.normal-card-link {
   width: 100%;
+  text-align: center;
 }
 
-.normal-card-link button {
-  text-transform: uppercase;
-  color: hsl(0, 0%, 100%);
+.storage,
+.users,
+.usage {
+  padding: 20px 0;
+}
+
+.normal-card a {
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  font-size: 12px;
-  font-weight: 600;
-  outline: none;
   width: 100%;
   padding: 10px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.long-card-link {
-  width: 100%;
-}
-
-.long-card-link button {
-  background: hsl(0, 0%, 100%);
+  margin-top: 10px;
+  color: white;
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  color: hsl(237, 63%, 64%);
-  width: 100%;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 10px;
-  border: 1px solid transparent;
+  text-align: center;
+  font-size: 13px;
   border-radius: 5px;
-  cursor: pointer;
+}
+
+.normal-card a:hover {
+  background: transparent;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(236, 72%, 79%);
+}
+
+.long-card a {
+  background: white;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+
+  color: hsl(237, 63%, 64%);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.long-card a:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
 }
 
 .attribution {
   text-align: center;
-  font-size: 12px;
-  font-weight: 550;
-  color: hsl(233, 13%, 49%);
-}
-
-.attribution a {
-  text-decoration: none;
 }
 
 /* Active class */
@@ -187,34 +216,21 @@ h1 {
   right: 47%;
 }
 
-@media (min-width: 600px) {
-  html,
-  body {
-    justify-content: center;
-    overflow: hidden;
+@media screen and (max-width: 599px) {
+  .top-background img {
+    height: 400px;
   }
+
+  .bottom-background {
+    display: none;
+  }
+
   .container {
-    flex-direction: row;
-    gap: 0;
+    flex-direction: column;
+    gap: 1.5em;
   }
 
   .container > * {
-    min-width: 30%;
-  }
-
-  .long-card {
-    height: 23em;
-  }
-
-  .normal-card-link button:hover {
-    border: 1px solid hsl(237, 63%, 64%);
-    color: hsl(237, 63%, 64%);
-    background: transparent;
-  }
-
-  .long-card-link button:hover {
-    background: transparent;
-    border: 1px solid hsl(0, 0%, 100%);
-    color: hsl(0, 0%, 100%);
+    height: 400px;
   }
 }
